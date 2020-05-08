@@ -22,4 +22,19 @@ namespace Proyecto_SEBET.Models
             this.context.SaveChanges();
         }
     }
+
+    public class AreaRepository : IAreaRepository
+    {
+        private DataContext context;
+
+        public AreaRepository(DataContext ctx) => context = ctx;
+
+        public IEnumerable<Area> Areas => context.Areas;
+
+        public void AddArea(Area area)
+        {
+            context.Areas.Add(area);
+            context.SaveChanges();
+        }
+    } 
 }
