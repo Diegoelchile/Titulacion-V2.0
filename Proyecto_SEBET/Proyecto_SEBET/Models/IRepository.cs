@@ -9,6 +9,8 @@ namespace Proyecto_SEBET.Models
     {
         IEnumerable<User> Users { get; }
 
+        //User GetUser(long key);
+
         void RegisterUser(User newUser);
     }
 }

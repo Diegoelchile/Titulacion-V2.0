@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace Proyecto_SEBET.Models
         public DataRepository(DataContext ctx) => context = ctx;
 
         public IEnumerable<User> Users => context.Users;
+
+        //public User GetUser(long key) => context.Users.Find(key);
 
         public void RegisterUser(User newUser)
         {
