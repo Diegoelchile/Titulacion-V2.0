@@ -1,0 +1,52 @@
+﻿@model IEnumerable<User>
+<form asp-action="Register" method="post">
+    <div class="row" style="padding-top:50px;">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" step="any" name="Name" class="form-control" required autofocus placeholder="Nombre(s)" />
+            </div>
+            <div class="form-group">
+                <input type="text" step="any" name="LastName" class="form-control" required placeholder="Apellidos" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="SpecialBusiName" class="form-control" required placeholder="Numero de Boleta" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <select name="Area" required class="form-control">
+                    <option value="">Seleccione una opción</option>
+                    <option value="Ingenieria y Ciencias Fisíco Matemáticas">Ingenieria y Ciencias Fisíco Matemáticas</option>
+                    <option value="Ciencias Médico Biológicas">Ciencias Médico Biológicas</option>
+                    <option value="Ciencias Sociales y Administrativas">Ciencias Sociales y Administrativas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="Formality" required class="form-control">
+                    <option value="">Seleccione una opción</option>
+                    <option value="Media Superior">Media Superior</option>
+                    <option value="Superior">Superior (Licenciatura/Ingenieria)</option>
+                    <option value="Maestria">Maestria</option>
+                    <option value="Doctorado">Doctorado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" name="SpecialBusiName" class="form-control" required placeholder="Espacialidad" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="email" name="Email" class="form-control" required placeholder="Correo Electronico" />
+            </div>
+            <div class="form-group">
+                <input type="password" name="Password" class="form-control" required placeholder="Comntraseña" />
+            </div>
+            <div class="form-group">
+                <input type="password" name="Password" class="form-control" required placeholder="Confirmar Contraseña" />
+            </div>
+        </div>
+        <div class="form-group text-right">
+            <input type="submit" value="Registrar" id="btnRegistrar" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
