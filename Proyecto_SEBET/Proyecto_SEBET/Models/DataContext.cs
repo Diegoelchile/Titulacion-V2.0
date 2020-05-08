@@ -11,5 +11,9 @@ namespace Proyecto_SEBET.Models
         public DataContext(DbContextOptions<DataContext> opts) : base(opts) { }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Area> Areas { get; set; }
+
+        public DbSet<Formality> Formalities { get; set; }
     }
 }

@@ -13,4 +13,11 @@ namespace Proyecto_SEBET.Models
 
         void RegisterUser(User newUser);
     }
+
+    public interface IAreaRepository
+    {
+        IEnumerable<Area> Areas { get; }
+
+        void AddArea(Area area); 
+    }
 }
