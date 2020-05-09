@@ -12,7 +12,10 @@
     </div>
     <br />
     <div class="form-group">
-        <input type="submit" value="Empresa" id="btnCompany" class="btn btn-primary" />
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+            Empresa
+        </button>
+        @*<input type="submit" value="Empresa" id="btnCompany" class="btn btn-primary" />*@
     </div>
     <br />
     <a asp-controller="Areas" asp-action="Index">Agregar</a>
@@ -40,13 +43,14 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-primary">Iniciar sesión</button>
-                <button type="button" class="btn btn-primary" asp-action="Registry">Registrarse</button>
-                @*<a asp-action="Registry">Registrarse</a>*@
+                @*<button asp-action="Registry" type="button" class="btn btn-primary" >Registrarse</button>*@
+                <a asp-action="Registry">Registrarse</a>
             </div>
         </div>
     </div>
 </div>
+
 
 
