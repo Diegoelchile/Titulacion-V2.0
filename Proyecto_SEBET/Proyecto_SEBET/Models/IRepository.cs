@@ -7,17 +7,25 @@ namespace Proyecto_SEBET.Models
 {
     public interface IRepository
     {
-        IEnumerable<User> Users { get; }
+        IQueryable<User> Users { get; }
+
+        IQueryable<Area> Areas { get; }
+
+        IQueryable<Formality> Formalities { get; }
 
         //User GetUser(long key);
 
         void RegisterUser(User newUser);
+
+        void AddArea(Area area);
+
+        void AddFormality(Formality formality);
     }
 
-    public interface IAreaRepository
+    /*public interface IAreaRepository
     {
-        IEnumerable<Area> Areas { get; }
+        IQueryable<Area> Areas { get; }
 
         void AddArea(Area area); 
-    }
+    }*/
 }

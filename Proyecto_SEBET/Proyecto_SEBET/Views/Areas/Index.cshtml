@@ -1,0 +1,19 @@
+﻿
+@model IQueryable<Area>
+
+    <form asp-action="InsertArea" method="post">
+        <div class="row p-2">
+            <div class="col-1"></div>
+            <div class="col">
+                <input type="text" name="Name" placeholder="Nombre" class="form-control" />
+            </div>
+            <div class="col">
+                <input type="text" name="Description" placeholder="Descripcion" class="form-control" />
+            </div>
+            <div class="col-3">
+                <input type="submit" name="Agregar" value="ADD" />
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </div>
+    </form>
+
