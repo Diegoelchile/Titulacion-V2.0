@@ -26,8 +26,8 @@ namespace Proyecto_SEBET
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddSingleton<IRepository, DataRepository>();
             services.AddTransient<IRepository, DataRepository>();
+            //services.AddTransient<IAreaRepository, AreaRepository>();
             string conSql = Configuration["ConnectionStrings:DefaultConnection"];
             services.AddDbContext<DataContext>(options => options.UseSqlServer(conSql));
         }

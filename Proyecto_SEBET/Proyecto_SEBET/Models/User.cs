@@ -28,4 +28,19 @@ namespace Proyecto_SEBET.Models
         public Formality Formality { get; set; }
 
     }
+
+    public class Area
+    {
+        public long ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+    }
+
+    public class Formality
+    {
+        public long ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
 }

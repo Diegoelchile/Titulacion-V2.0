@@ -7,22 +7,21 @@ using Proyecto_SEBET.Models;
 
 namespace Proyecto_SEBET.Controllers
 {
-    public class AreasController : Controller
+    public class FormalitiesController : Controller
     {
         private IRepository repository;
 
-        public AreasController(IRepository repo) => repository = repo;
+        public FormalitiesController(IRepository repo) => repository = repo;
 
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult InsertArea(Area area)
+        public IActionResult InsertFormality(Formality formality)
         {
-            repository.AddArea(area);
+            repository.AddFormality(formality);
             return RedirectToAction(nameof(Index));
         }
-
     }
 }
